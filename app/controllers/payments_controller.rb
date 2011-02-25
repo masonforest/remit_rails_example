@@ -70,7 +70,7 @@ class PaymentsController < ApplicationController
     def fps_payment_url(id,amount,return_url)
       remit.get_single_use_pipeline(
         :caller_reference => (0...8).map{65.+(rand(25)).chr}.join,
-        :transaction_amount => "8.00",
+        :transaction_amount => amount,
         :return_url => return_url
       ).url
     end
