@@ -1,0 +1,9 @@
+development: &sandbox
+  access_key: "AKIAIFWRUSDHRNT4YEJQ"
+  secret_key: "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"
+test:
+  <<: *sandbox
+
+production:
+  access_key: "AKIAIFWRUSDHRNT4YEJQ"
+  secret_key: "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"
