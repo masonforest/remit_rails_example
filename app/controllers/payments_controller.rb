@@ -59,7 +59,7 @@ class PaymentsController < ApplicationController
         :caller_token_id => caller_token,
         :recipient_token_id => recipient_token, 
         :sender_token_id => sender_token,
-        :transaction_amount        => Remit::RequestTypes::Amount.new(:currency_code => 'USD', :amount => amount),  
+        :transaction_amount        => Remit::RequestTypes::Amount.new(:currency_code => 'USD', :value => amount),  
         :charge_fee_to => "Recipient",
         :caller_reference => Time.now.to_i.to_s
     )
